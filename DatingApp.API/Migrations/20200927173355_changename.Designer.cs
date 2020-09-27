@@ -4,14 +4,16 @@ using DatingApp.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContex))]
-    partial class DataContexModelSnapshot : ModelSnapshot
+    [Migration("20200927173355_changename")]
+    partial class changename
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

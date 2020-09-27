@@ -4,14 +4,16 @@ using DatingApp.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContex))]
-    partial class DataContexModelSnapshot : ModelSnapshot
+    [Migration("20200923231346_USerEntity")]
+    partial class USerEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,8 +34,8 @@ namespace DatingApp.API.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<string>("Username")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Username")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
